@@ -37,11 +37,6 @@ namespace MyInterface
             _ConfigureForm.update();
         }
 
-        private void dltBtn_Click(object sender, EventArgs e)
-        {
-            _ConfigureForm.delete();
-        }
-
         private void ClrBtn_Click(object sender, EventArgs e)
         {
             _ConfigureForm.clear();

@@ -33,17 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewArea = new System.Windows.Forms.DataGridView();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.dltBtn = new System.Windows.Forms.Button();
             this.NopayLeaveTextBox = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label5 = new System.Windows.Forms.Label();
-            this.rangeIdComboBox = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.beginDateTextBox = new System.Windows.Forms.TextBox();
-            this.endDateTextBox = new System.Windows.Forms.TextBox();
-            this.dateRangeGroupBox = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.totalLeaveTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -68,11 +60,19 @@
             this.SelectGroupBox = new System.Windows.Forms.GroupBox();
             this.issueDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dateRangeGroupBox = new System.Windows.Forms.GroupBox();
+            this.EndDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.BginDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.DateRangeTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dltBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArea)).BeginInit();
-            this.dateRangeGroupBox.SuspendLayout();
             this.findGroupBox.SuspendLayout();
             this.payValueGroupBox.SuspendLayout();
             this.SelectGroupBox.SuspendLayout();
+            this.dateRangeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // updateBtn
@@ -105,7 +105,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(659, 383);
+            this.label2.Location = new System.Drawing.Point(659, 394);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 23);
@@ -143,24 +143,11 @@
             this.saveBtn.UseVisualStyleBackColor = false;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // dltBtn
-            // 
-            this.dltBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
-            this.dltBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dltBtn.Location = new System.Drawing.Point(921, 665);
-            this.dltBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.dltBtn.Name = "dltBtn";
-            this.dltBtn.Size = new System.Drawing.Size(116, 44);
-            this.dltBtn.TabIndex = 60;
-            this.dltBtn.Text = "Delete";
-            this.dltBtn.UseVisualStyleBackColor = false;
-            this.dltBtn.Click += new System.EventHandler(this.dltBtn_Click);
-            // 
             // NopayLeaveTextBox
             // 
             this.NopayLeaveTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.NopayLeaveTextBox.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NopayLeaveTextBox.Location = new System.Drawing.Point(770, 345);
+            this.NopayLeaveTextBox.Location = new System.Drawing.Point(770, 356);
             this.NopayLeaveTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.NopayLeaveTextBox.Name = "NopayLeaveTextBox";
             this.NopayLeaveTextBox.ReadOnly = true;
@@ -172,100 +159,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(605, 347);
+            this.label5.Location = new System.Drawing.Point(605, 358);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 23);
             this.label5.TabIndex = 38;
             this.label5.Text = "No pay Leaves  :";
-            // 
-            // rangeIdComboBox
-            // 
-            this.rangeIdComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.rangeIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.rangeIdComboBox.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rangeIdComboBox.FormattingEnabled = true;
-            this.rangeIdComboBox.Location = new System.Drawing.Point(9, 52);
-            this.rangeIdComboBox.Name = "rangeIdComboBox";
-            this.rangeIdComboBox.Size = new System.Drawing.Size(258, 30);
-            this.rangeIdComboBox.TabIndex = 71;
-            this.rangeIdComboBox.SelectedIndexChanged += new System.EventHandler(this.rangeIdComboBox_SelectedIndexChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(9, 26);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(148, 23);
-            this.label12.TabIndex = 71;
-            this.label12.Text = "Date Range ID :";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(10, 91);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(116, 23);
-            this.label14.TabIndex = 73;
-            this.label14.Text = "Begin Date :";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(10, 162);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 23);
-            this.label15.TabIndex = 74;
-            this.label15.Text = "End Date :";
-            // 
-            // beginDateTextBox
-            // 
-            this.beginDateTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.beginDateTextBox.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.beginDateTextBox.Location = new System.Drawing.Point(13, 118);
-            this.beginDateTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.beginDateTextBox.MaxLength = 11;
-            this.beginDateTextBox.Name = "beginDateTextBox";
-            this.beginDateTextBox.ReadOnly = true;
-            this.beginDateTextBox.Size = new System.Drawing.Size(254, 27);
-            this.beginDateTextBox.TabIndex = 73;
-            this.beginDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // endDateTextBox
-            // 
-            this.endDateTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.endDateTextBox.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.endDateTextBox.Location = new System.Drawing.Point(13, 192);
-            this.endDateTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.endDateTextBox.MaxLength = 11;
-            this.endDateTextBox.Name = "endDateTextBox";
-            this.endDateTextBox.ReadOnly = true;
-            this.endDateTextBox.Size = new System.Drawing.Size(254, 27);
-            this.endDateTextBox.TabIndex = 75;
-            this.endDateTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dateRangeGroupBox
-            // 
-            this.dateRangeGroupBox.Controls.Add(this.endDateTextBox);
-            this.dateRangeGroupBox.Controls.Add(this.beginDateTextBox);
-            this.dateRangeGroupBox.Controls.Add(this.label15);
-            this.dateRangeGroupBox.Controls.Add(this.label14);
-            this.dateRangeGroupBox.Controls.Add(this.label12);
-            this.dateRangeGroupBox.Controls.Add(this.rangeIdComboBox);
-            this.dateRangeGroupBox.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateRangeGroupBox.Location = new System.Drawing.Point(369, 62);
-            this.dateRangeGroupBox.Name = "dateRangeGroupBox";
-            this.dateRangeGroupBox.Size = new System.Drawing.Size(286, 230);
-            this.dateRangeGroupBox.TabIndex = 70;
-            this.dateRangeGroupBox.TabStop = false;
-            this.dateRangeGroupBox.Text = "DATE RANGE";
-            this.dateRangeGroupBox.Paint += new System.Windows.Forms.PaintEventHandler(this.dateRangeGroupBox_Paint);
             // 
             // label11
             // 
@@ -471,7 +370,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(587, 311);
+            this.label3.Location = new System.Drawing.Point(587, 322);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 23);
@@ -482,7 +381,7 @@
             // 
             this.idTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(770, 382);
+            this.idTextBox.Location = new System.Drawing.Point(770, 393);
             this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
@@ -545,7 +444,7 @@
             this.issueDateTimePicker.CustomFormat = "yyyy-MMM-dd";
             this.issueDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.issueDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.issueDateTimePicker.Location = new System.Drawing.Point(770, 311);
+            this.issueDateTimePicker.Location = new System.Drawing.Point(770, 322);
             this.issueDateTimePicker.Name = "issueDateTimePicker";
             this.issueDateTimePicker.Size = new System.Drawing.Size(230, 27);
             this.issueDateTimePicker.TabIndex = 47;
@@ -561,12 +460,109 @@
             this.label1.TabIndex = 177;
             this.label1.Text = "Salary Details";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(10, 36);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(116, 23);
+            this.label14.TabIndex = 73;
+            this.label14.Text = "Begin Date :";
+            // 
+            // dateRangeGroupBox
+            // 
+            this.dateRangeGroupBox.Controls.Add(this.EndDateTimePicker);
+            this.dateRangeGroupBox.Controls.Add(this.BginDateTimePicker);
+            this.dateRangeGroupBox.Controls.Add(this.label15);
+            this.dateRangeGroupBox.Controls.Add(this.label14);
+            this.dateRangeGroupBox.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateRangeGroupBox.Location = new System.Drawing.Point(369, 92);
+            this.dateRangeGroupBox.Name = "dateRangeGroupBox";
+            this.dateRangeGroupBox.Size = new System.Drawing.Size(286, 178);
+            this.dateRangeGroupBox.TabIndex = 70;
+            this.dateRangeGroupBox.TabStop = false;
+            this.dateRangeGroupBox.Text = "DATE RANGE";
+            this.dateRangeGroupBox.Paint += new System.Windows.Forms.PaintEventHandler(this.dateRangeGroupBox_Paint);
+            // 
+            // EndDateTimePicker
+            // 
+            this.EndDateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.EndDateTimePicker.CustomFormat = "yyyy-MMM-dd";
+            this.EndDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.EndDateTimePicker.Location = new System.Drawing.Point(14, 138);
+            this.EndDateTimePicker.Name = "EndDateTimePicker";
+            this.EndDateTimePicker.Size = new System.Drawing.Size(253, 27);
+            this.EndDateTimePicker.TabIndex = 180;
+            // 
+            // BginDateTimePicker
+            // 
+            this.BginDateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.BginDateTimePicker.CustomFormat = "yyyy-MMM-dd";
+            this.BginDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BginDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.BginDateTimePicker.Location = new System.Drawing.Point(13, 68);
+            this.BginDateTimePicker.Name = "BginDateTimePicker";
+            this.BginDateTimePicker.Size = new System.Drawing.Size(254, 27);
+            this.BginDateTimePicker.TabIndex = 179;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(10, 107);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(101, 23);
+            this.label15.TabIndex = 74;
+            this.label15.Text = "End Date :";
+            // 
+            // DateRangeTextBox
+            // 
+            this.DateRangeTextBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.DateRangeTextBox.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateRangeTextBox.Location = new System.Drawing.Point(770, 286);
+            this.DateRangeTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DateRangeTextBox.Name = "DateRangeTextBox";
+            this.DateRangeTextBox.ReadOnly = true;
+            this.DateRangeTextBox.Size = new System.Drawing.Size(230, 29);
+            this.DateRangeTextBox.TabIndex = 178;
+            this.DateRangeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(593, 289);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 23);
+            this.label4.TabIndex = 70;
+            this.label4.Text = "Work date range :";
+            // 
+            // dltBtn
+            // 
+            this.dltBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
+            this.dltBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dltBtn.Location = new System.Drawing.Point(921, 665);
+            this.dltBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.dltBtn.Name = "dltBtn";
+            this.dltBtn.Size = new System.Drawing.Size(116, 44);
+            this.dltBtn.TabIndex = 60;
+            this.dltBtn.Text = "Delete";
+            this.dltBtn.UseVisualStyleBackColor = false;
+            this.dltBtn.Click += new System.EventHandler(this.dltBtn_Click);
+            // 
             // salaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(221)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1037, 693);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.DateRangeTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SelectGroupBox);
             this.Controls.Add(this.idTextBox);
@@ -586,14 +582,14 @@
             this.Name = "salaryForm";
             this.Load += new System.EventHandler(this.salaryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArea)).EndInit();
-            this.dateRangeGroupBox.ResumeLayout(false);
-            this.dateRangeGroupBox.PerformLayout();
             this.findGroupBox.ResumeLayout(false);
             this.findGroupBox.PerformLayout();
             this.payValueGroupBox.ResumeLayout(false);
             this.payValueGroupBox.PerformLayout();
             this.SelectGroupBox.ResumeLayout(false);
             this.SelectGroupBox.PerformLayout();
+            this.dateRangeGroupBox.ResumeLayout(false);
+            this.dateRangeGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,17 +602,9 @@
         internal System.Windows.Forms.Label label2;
         internal System.Windows.Forms.DataGridView dataGridViewArea;
         internal System.Windows.Forms.Button saveBtn;
-        internal System.Windows.Forms.Button dltBtn;
         internal System.Windows.Forms.TextBox NopayLeaveTextBox;
         internal System.ComponentModel.BackgroundWorker backgroundWorker1;
         internal System.Windows.Forms.Label label5;
-        internal System.Windows.Forms.ComboBox rangeIdComboBox;
-        internal System.Windows.Forms.Label label12;
-        internal System.Windows.Forms.Label label14;
-        internal System.Windows.Forms.Label label15;
-        internal System.Windows.Forms.TextBox beginDateTextBox;
-        internal System.Windows.Forms.TextBox endDateTextBox;
-        internal System.Windows.Forms.GroupBox dateRangeGroupBox;
         internal System.Windows.Forms.Label label11;
         internal System.Windows.Forms.TextBox totalLeaveTextBox;
         internal System.Windows.Forms.Label label8;
@@ -641,5 +629,13 @@
         internal System.Windows.Forms.GroupBox SelectGroupBox;
         internal System.Windows.Forms.DateTimePicker issueDateTimePicker;
         private System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.Label label14;
+        internal System.Windows.Forms.GroupBox dateRangeGroupBox;
+        internal System.Windows.Forms.Label label15;
+        internal System.Windows.Forms.TextBox DateRangeTextBox;
+        internal System.Windows.Forms.DateTimePicker EndDateTimePicker;
+        internal System.Windows.Forms.DateTimePicker BginDateTimePicker;
+        internal System.Windows.Forms.Label label4;
+        internal System.Windows.Forms.Button dltBtn;
     }
 }

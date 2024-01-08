@@ -139,7 +139,7 @@
             // 
             this.dltBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
             this.dltBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dltBtn.Location = new System.Drawing.Point(162, 483);
+            this.dltBtn.Location = new System.Drawing.Point(152, 483);
             this.dltBtn.Margin = new System.Windows.Forms.Padding(2);
             this.dltBtn.Name = "dltBtn";
             this.dltBtn.Size = new System.Drawing.Size(116, 44);

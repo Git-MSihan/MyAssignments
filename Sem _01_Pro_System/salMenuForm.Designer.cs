@@ -31,8 +31,6 @@
             this.LoadpanelArea = new System.Windows.Forms.Panel();
             this.salMenuStrip = new System.Windows.Forms.MenuStrip();
             this.salaryCalculationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monthlySalaryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.overallSalarySummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,12 +48,10 @@
             this.salMenuStrip.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.salMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salaryCalculationToolStripMenuItem,
-            this.monthlySalaryReportToolStripMenuItem,
-            this.overallSalarySummaryToolStripMenuItem});
+            this.salaryCalculationToolStripMenuItem});
             this.salMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.salMenuStrip.Name = "salMenuStrip";
-            this.salMenuStrip.Padding = new System.Windows.Forms.Padding(220, 2, 0, 2);
+            this.salMenuStrip.Padding = new System.Windows.Forms.Padding(380, 2, 0, 2);
             this.salMenuStrip.Size = new System.Drawing.Size(1055, 31);
             this.salMenuStrip.TabIndex = 5;
             this.salMenuStrip.Text = "menuStrip1";
@@ -67,20 +63,6 @@
             this.salaryCalculationToolStripMenuItem.Size = new System.Drawing.Size(138, 27);
             this.salaryCalculationToolStripMenuItem.Text = "Salary details";
             this.salaryCalculationToolStripMenuItem.Click += new System.EventHandler(this.salaryCalculationToolStripMenuItem_Click);
-            // 
-            // monthlySalaryReportToolStripMenuItem
-            // 
-            this.monthlySalaryReportToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.monthlySalaryReportToolStripMenuItem.Name = "monthlySalaryReportToolStripMenuItem";
-            this.monthlySalaryReportToolStripMenuItem.Size = new System.Drawing.Size(217, 27);
-            this.monthlySalaryReportToolStripMenuItem.Text = "Monthly Salary Report";
-            // 
-            // overallSalarySummaryToolStripMenuItem
-            // 
-            this.overallSalarySummaryToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.overallSalarySummaryToolStripMenuItem.Name = "overallSalarySummaryToolStripMenuItem";
-            this.overallSalarySummaryToolStripMenuItem.Size = new System.Drawing.Size(225, 27);
-            this.overallSalarySummaryToolStripMenuItem.Text = "Overall salary summary";
             // 
             // salMenuForm
             // 
@@ -107,7 +89,5 @@
         private System.Windows.Forms.Panel LoadpanelArea;
         private System.Windows.Forms.MenuStrip salMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem salaryCalculationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem monthlySalaryReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem overallSalarySummaryToolStripMenuItem;
     }
 }

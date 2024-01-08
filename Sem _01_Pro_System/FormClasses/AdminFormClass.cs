@@ -28,11 +28,18 @@ namespace MyInterface.FormClasses
             dgtable.CellClick += dgtable_cell_click;
         }
 
-        string LoadTableQuery = $"select * from Login_Details";
+        string LoadTableQuery = $"select * from Login_Details where ID_Number = '{LoginAuth.loggedUser.Id}'";
 
         public void LoadDataIntoGridView()
         {
-            LoadData.loadTable(LoadTableQuery, dgtable);
+            if (LoginAuth.loggedUser.Id == "1")
+            {
+                LoadData.loadTable($"select * from Login_Details", dgtable);
+            }
+            else
+            {
+                LoadData.loadTable(LoadTableQuery, dgtable);
+            }
         }
 
         public void save()
@@ -60,13 +67,6 @@ namespace MyInterface.FormClasses
             {
                 MessageBox.Show("Please provide all relevant information.");
             }
-        }
-
-        public void delete()
-        {
-            string _delete_query = $"delete from Login_Details where ID_Number = '" + idbox.Text + "' ";
-            CommonCode.delete(_delete_query, LoadTableQuery, dgtable, form.Controls);
-            CommonCode.Clear(form.Controls);
         }
 
         public void dgtable_cell_click(object sender, DataGridViewCellEventArgs e)

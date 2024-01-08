@@ -50,19 +50,6 @@ namespace MyInterface.FormClasses
             LoadData.loadTable(LoadTableQuery, dgtable);
         }
 
-        public void save()
-        {
-            if (toolscheck.CheckAllDataInsert(form.Controls, idbox))
-            {
-                string insert_query = $"insert into workdays (Work_Begin_Date , Work_End_Date, Work_Date_Range, Admin_id ) values ('{startdatebox.Text}', '{enddatebox.Text}' , '{daterangebox.Text}', '{LoginAuth.loggedUser.Id}' )";
-                CommonCode.save(insert_query, LoadTableQuery, dgtable, form.Controls, idbox);
-            }
-            else
-            {
-                MessageBox.Show("Please provide all relevant information.");
-            }
-        }
-
         public void update()
         {
             if (toolscheck.CheckAllDataInsert(form.Controls, idbox))
@@ -74,12 +61,6 @@ namespace MyInterface.FormClasses
             {
                 MessageBox.Show("Please provide all relevant information.");
             }
-        }
-
-        public void delete()
-        {
-            string _delete_query = $"delete from workdays where Wo_id = '" + idbox.Text + "' ";
-            CommonCode.delete(_delete_query, LoadTableQuery, dgtable, form.Controls);
         }
 
         public void clear()

@@ -54,11 +54,6 @@ namespace MyInterface
             _salaryform.clear();
         }
 
-        private void rangeIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            _salaryform.find_date_in_dateRangeroup();
-        }
-
         private void findBtn_Click(object sender, EventArgs e)
         {
             _salaryform.find_findGroup_data();

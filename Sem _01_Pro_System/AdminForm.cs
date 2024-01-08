@@ -36,11 +36,6 @@ namespace MyInterface
             _adminForm.update();
         }
 
-        private void dltBtn_Click(object sender, EventArgs e)
-        {
-            _adminForm.delete();
-        }
-
         private void ClrBtn_Click(object sender, EventArgs e)
         {
             _adminForm.clear();

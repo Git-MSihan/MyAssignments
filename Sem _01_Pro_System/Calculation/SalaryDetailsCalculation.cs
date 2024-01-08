@@ -11,23 +11,14 @@ namespace MyInterface.Calculation
 {
     internal class SalaryDetailsCalculation
     {
-        public static void Find_dates_in_dateRangeroup(ComboBox _daterangeidbox, TextBox _begindatebox, TextBox _enddatebox)
+        public static void find_work_date_range(TextBox _daterangebox)
         {
-            try
+            DataTable dt = LoadData.getDataTableFromGivenSQL($"SELECT Work_Date_Range FROM workdays");
+            if (dt.Rows.Count > 0)
             {
-                string _find = $"select * from workdays where Wo_id = '{_daterangeidbox.Text}'";
-                DataTable dt = LoadData.getDataTableFromGivenSQL(_find);
-                if (dt.Rows.Count > 0)
-                {
-                    string startDate = dt.Rows[0]["Work_Begin_Date"].ToString();
-                    string endDate = dt.Rows[0]["Work_End_Date"].ToString();
-                    _begindatebox.Text = startDate.Substring(0, startDate.IndexOf(" ") + 1);
-                    _enddatebox.Text = endDate.Substring(0, startDate.IndexOf(" ") + 1);
-                }
+                _daterangebox.Text = dt.Rows[0]["Work_Date_Range"].ToString();
             }
-            catch { }
         }
-
 
         public static void find_total_salary(ComboBox _employeenamebox, TextBox _totalsalarybox)
         {
@@ -52,12 +43,12 @@ namespace MyInterface.Calculation
             }
         }
 
-        public static void find_total_leave(ComboBox _employeenamebox, TextBox _totalleavebox, TextBox _begindatebox, TextBox _enddatebox)
+        public static void find_total_leave(ComboBox _employeenamebox, TextBox _totalleavebox, DateTimePicker _begindatebox, DateTimePicker _enddatebox)
         {
             try
             {
-                string totalleve = $"Select sum (No_of_Leaves) as Total_Leaves from request_leave where Employee_id = {_employeenamebox.SelectedValue.ToString()} and Leave_Begin_Date BETWEEN '{_begindatebox.Text}' AND '{_enddatebox.Text}' ";
-                DataTable dt = LoadData.getDataTableFromGivenSQL(totalleve);
+                string totalleave = $"Select sum (No_of_Leaves) as Total_Leaves from request_leave where Employee_id = {_employeenamebox.SelectedValue.ToString()} and Leave_Begin_Date BETWEEN '{_begindatebox.Text}' AND '{_enddatebox.Text}' ";
+                DataTable dt = LoadData.getDataTableFromGivenSQL(totalleave);
                 if (dt.Rows.Count > 0)
                 {
                     int LValue;
@@ -81,11 +72,11 @@ namespace MyInterface.Calculation
         }
 
 
-        public static void find_total_OThourse(ComboBox _employeenamebox, TextBox _OThoursebox, TextBox _begindatebox, TextBox _enddatebox, DateTimePicker _salaryissuedatebox, ComboBox _daterangeidbox)
+        public static void find_total_OThourse(ComboBox _employeenamebox, TextBox _OThoursebox, DateTimePicker _begindatebox, DateTimePicker _enddatebox, DateTimePicker _salaryissuedatebox, TextBox _daterangebox)
         {
             try
             {
-                string OTQuery = $"SELECT((SELECT SUM (worked_hours) AS Worked_Hours FROM daily_attendance DA where Employee_id = '{_employeenamebox.SelectedValue.ToString()}' and DA.Intime BETWEEN '{_begindatebox.Text}' AND '{_enddatebox.Text}') - (((SELECT Work_Date_Range FROM workdays WHERE Wo_id = '{_daterangeidbox.Text}') - (SELECT SUM (No_of_Leaves) as Total_Leaves FROM request_leave WHERE Employee_id = '{_employeenamebox.SelectedValue.ToString()}' and Leave_Begin_Date BETWEEN '{_begindatebox.Text}' AND '{_enddatebox.Text}')) * (SELECT Daily_Working_Hours FROM Configure C1 WHERE '{_salaryissuedatebox.Text}' BETWEEN C1.Annual_Year_Start_Date AND c1.Annual_Year_End_Date ))) AS Worked_OT_Hours";
+                string OTQuery = $"SELECT((SELECT SUM (worked_hours) AS Worked_Hours FROM daily_attendance DA where Employee_id = '{_employeenamebox.SelectedValue.ToString()}' and DA.Intime BETWEEN '{_begindatebox.Text}' AND '{_enddatebox.Text}') - (('{_daterangebox.Text}' - (SELECT SUM (No_of_Leaves) as Total_Leaves FROM request_leave WHERE Employee_id = '{_employeenamebox.SelectedValue.ToString()}' and Leave_Begin_Date BETWEEN '{_begindatebox.Text}' AND '{_enddatebox.Text}')) * (SELECT Daily_Working_Hours FROM Configure C1 WHERE '{_salaryissuedatebox.Text}' BETWEEN C1.Annual_Year_Start_Date AND c1.Annual_Year_End_Date ))) AS Worked_OT_Hours";
 
                 DataTable dt = LoadData.getDataTableFromGivenSQL(OTQuery);
                 if (dt.Rows.Count > 0)
@@ -112,11 +103,10 @@ namespace MyInterface.Calculation
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
         }
 
 
-        public static void find_Nopayvalue(TextBox _totalsalarybox, ComboBox _employeenamebox, ComboBox _daterangeidbox, TextBox _begindatebox, TextBox _enddatebox, TextBox _nopaylevebox, TextBox _nopaybox)
+        public static void find_Nopayvalue(TextBox _totalsalarybox, ComboBox _employeenamebox, DateTimePicker _begindatebox, DateTimePicker _enddatebox, TextBox _nopaylevebox, TextBox _nopaybox, TextBox _daterangebox)
         {
             try
             {
@@ -125,7 +115,7 @@ namespace MyInterface.Calculation
                 if (decimal.TryParse(_totalsalarybox.Text, out decimal TotalSalary))
                 {
                     string NopayleveQuery = $"SELECT SUM(No_of_Leaves) AS NopayLeaves FROM request_leave WHERE Employee_id = '{id}' AND Leave_Types_id = 6 AND Leave_Begin_Date BETWEEN '{_begindatebox.Text}' AND '{_enddatebox.Text}'";
-                    string noPayQuery = $"SELECT ( ({TotalSalary} / (SELECT Work_Date_Range FROM workdays WHERE Wo_id = '{_daterangeidbox.Text}')) * (Select sum (No_of_Leaves) from request_leave where Employee_id = {id} and Leave_Types_id = 6  and Leave_Begin_Date BETWEEN '{_begindatebox.Text}' AND '{_enddatebox.Text}')) as NoPayValue";
+                    string noPayQuery = $"SELECT ( ({TotalSalary} / '{_daterangebox.Text}') * (Select sum (No_of_Leaves) from request_leave where Employee_id = {id} and Leave_Types_id = 6  and Leave_Begin_Date BETWEEN '{_begindatebox.Text}' AND '{_enddatebox.Text}')) as NoPayValue";
 
                     DataTable dt = LoadData.getDataTableFromGivenSQL(NopayleveQuery);
                     if (dt.Rows.Count > 0)

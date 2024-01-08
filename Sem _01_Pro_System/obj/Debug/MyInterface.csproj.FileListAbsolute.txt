@@ -23,3 +23,28 @@ C:\Users\SIHAN\Desktop\Pro\MyInterface\obj\Debug\MyInterface.typesofLeaveForm.re
 C:\Users\SIHAN\Desktop\Pro\MyInterface\obj\Debug\MyInterface.workdaysForm.resources
 C:\Users\SIHAN\Desktop\Pro\MyInterface\obj\Debug\MyInterface.AdminForm.resources
 C:\Users\SIHAN\Desktop\Pro\MyInterface\obj\Debug\MyInterface.ConfigureForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.csproj.AssemblyReference.cache
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.csproj.SuggestedBindingRedirects.cache
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.AdminForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.ConfigureForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.dailyAtteForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.empForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.empLeaveMenuForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.EmpMenuForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.empTypeForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.homeForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.monthlyHolidayForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.Properties.Resources.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.requestLeaveForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.salaryForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.salMenuForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.setMenuForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.typesofLeaveForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.workdaysForm.resources
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.csproj.GenerateResource.cache
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.csproj.CoreCompileInputs.cache
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.exe
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\obj\Debug\MyInterface.pdb
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\bin\Debug\MyInterface.exe.config
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\bin\Debug\MyInterface.exe
+C:\Users\SIHAN\Desktop\Git\MyAssignments\Sem _01_Pro_System\bin\Debug\MyInterface.pdb

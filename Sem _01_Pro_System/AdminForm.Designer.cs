@@ -38,7 +38,6 @@
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.updateBtn = new System.Windows.Forms.Button();
-            this.dltBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.dataGridViewArea = new System.Windows.Forms.DataGridView();
             this.ClrBtn = new System.Windows.Forms.Button();
@@ -146,7 +145,7 @@
             // 
             this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
             this.updateBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.Location = new System.Drawing.Point(822, 584);
+            this.updateBtn.Location = new System.Drawing.Point(822, 576);
             this.updateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(116, 44);
@@ -155,24 +154,11 @@
             this.updateBtn.UseVisualStyleBackColor = false;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
-            // dltBtn
-            // 
-            this.dltBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
-            this.dltBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dltBtn.Location = new System.Drawing.Point(696, 584);
-            this.dltBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.dltBtn.Name = "dltBtn";
-            this.dltBtn.Size = new System.Drawing.Size(116, 44);
-            this.dltBtn.TabIndex = 57;
-            this.dltBtn.Text = "Delete";
-            this.dltBtn.UseVisualStyleBackColor = false;
-            this.dltBtn.Click += new System.EventHandler(this.dltBtn_Click);
-            // 
             // saveBtn
             // 
             this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
             this.saveBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(696, 490);
+            this.saveBtn.Location = new System.Drawing.Point(822, 416);
             this.saveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(116, 44);
@@ -203,7 +189,7 @@
             // 
             this.ClrBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
             this.ClrBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClrBtn.Location = new System.Drawing.Point(822, 490);
+            this.ClrBtn.Location = new System.Drawing.Point(822, 492);
             this.ClrBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClrBtn.Name = "ClrBtn";
             this.ClrBtn.Size = new System.Drawing.Size(116, 44);
@@ -221,7 +207,6 @@
             this.Controls.Add(this.ClrBtn);
             this.Controls.Add(this.dataGridViewArea);
             this.Controls.Add(this.updateBtn);
-            this.Controls.Add(this.dltBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.userNameTextBox);
@@ -253,7 +238,6 @@
         internal System.Windows.Forms.TextBox userNameTextBox;
         internal System.Windows.Forms.Label label3;
         internal System.Windows.Forms.Button updateBtn;
-        internal System.Windows.Forms.Button dltBtn;
         internal System.Windows.Forms.Button saveBtn;
         internal System.Windows.Forms.DataGridView dataGridViewArea;
         internal System.Windows.Forms.Button ClrBtn;

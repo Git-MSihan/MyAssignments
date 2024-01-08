@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.findBtn = new System.Windows.Forms.Button();
             this.ClrBtn = new System.Windows.Forms.Button();
             this.DOB = new System.Windows.Forms.DateTimePicker();
@@ -41,7 +41,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.updateBtn = new System.Windows.Forms.Button();
-            this.dltBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.JoinDate = new System.Windows.Forms.DateTimePicker();
             this.AddTextBox = new System.Windows.Forms.TextBox();
@@ -84,7 +83,7 @@
             // 
             this.ClrBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
             this.ClrBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClrBtn.Location = new System.Drawing.Point(540, 386);
+            this.ClrBtn.Location = new System.Drawing.Point(655, 386);
             this.ClrBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ClrBtn.Name = "ClrBtn";
             this.ClrBtn.Size = new System.Drawing.Size(116, 44);
@@ -188,7 +187,7 @@
             // 
             this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
             this.updateBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.Location = new System.Drawing.Point(790, 386);
+            this.updateBtn.Location = new System.Drawing.Point(787, 386);
             this.updateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(116, 44);
@@ -196,19 +195,6 @@
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = false;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click_1);
-            // 
-            // dltBtn
-            // 
-            this.dltBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
-            this.dltBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dltBtn.Location = new System.Drawing.Point(667, 386);
-            this.dltBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.dltBtn.Name = "dltBtn";
-            this.dltBtn.Size = new System.Drawing.Size(116, 44);
-            this.dltBtn.TabIndex = 194;
-            this.dltBtn.Text = "Delete";
-            this.dltBtn.UseVisualStyleBackColor = false;
-            this.dltBtn.Click += new System.EventHandler(this.dltBtn_Click_1);
             // 
             // saveBtn
             // 
@@ -411,14 +397,14 @@
             this.dataGridViewArea.AllowUserToResizeRows = false;
             this.dataGridViewArea.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewArea.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(93)))), ((int)(((byte)(115)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewArea.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewArea.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewArea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewArea.Location = new System.Drawing.Point(5, 435);
             this.dataGridViewArea.Name = "dataGridViewArea";
@@ -484,7 +470,6 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.updateBtn);
-            this.Controls.Add(this.dltBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.JoinDate);
             this.Controls.Add(this.AddTextBox);
@@ -527,7 +512,6 @@
         internal System.Windows.Forms.Label label13;
         internal System.Windows.Forms.Label label14;
         internal System.Windows.Forms.Button updateBtn;
-        internal System.Windows.Forms.Button dltBtn;
         internal System.Windows.Forms.Button saveBtn;
         internal System.Windows.Forms.DateTimePicker JoinDate;
         internal System.Windows.Forms.TextBox AddTextBox;

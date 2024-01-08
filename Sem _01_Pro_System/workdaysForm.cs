@@ -27,19 +27,9 @@ namespace MyInterface
             _workdaysForm.LoadDataIntoGridView();
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
-        {
-            _workdaysForm.save();
-        }
-
         private void updateBtn_Click(object sender, EventArgs e)
         {
             _workdaysForm.update();
-        }
-
-        private void dltBtn_Click(object sender, EventArgs e)
-        {
-            _workdaysForm.delete();
         }
 
         private void ClrBtn_Click(object sender, EventArgs e)

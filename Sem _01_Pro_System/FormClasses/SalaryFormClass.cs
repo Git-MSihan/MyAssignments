@@ -9,9 +9,9 @@ namespace MyInterface.FormClasses
     internal class SalaryFormClass
     {
 
-        TextBox begindatebox, enddatebox, totalsalarybox, OThoursebox, totalleavebox, basepaybox, nopaybox, grosspaybox, nopaylevebox, salaryidbox;
-        ComboBox daterangeidbox, employeenamebox;
-        DateTimePicker salaryissuedatebox;
+        TextBox totalsalarybox, OThoursebox, totalleavebox, basepaybox, nopaybox, grosspaybox, nopaylevebox, salaryidbox, daterangebox;
+        ComboBox employeenamebox;
+        DateTimePicker salaryissuedatebox, begindatebox, enddatebox;
         DataGridView dgtable;
         salaryForm form;
         GroupBox findGroupBox, payValueGroupBox, searchGroupBox, dateRangeGroupBox;
@@ -20,9 +20,9 @@ namespace MyInterface.FormClasses
         {
             form = _form;
             salaryidbox = form.idTextBox;
-            daterangeidbox = form.rangeIdComboBox;
-            begindatebox = form.beginDateTextBox;
-            enddatebox = form.endDateTextBox;
+            daterangebox = form.DateRangeTextBox;
+            begindatebox = form.BginDateTimePicker;
+            enddatebox = form.EndDateTimePicker;
             totalsalarybox = form.totSalaryTextBox;
             OThoursebox = form.OThourseTextBox;
             totalleavebox = form.totalLeaveTextBox;
@@ -63,7 +63,9 @@ namespace MyInterface.FormClasses
                     nopaybox.Text = dgtable.Rows[RowIndex].Cells[8].Value.ToString();
                     grosspaybox.Text = dgtable.Rows[RowIndex].Cells[9].Value.ToString();
                     basepaybox.Text = dgtable.Rows[RowIndex].Cells[10].Value.ToString();
-                    daterangeidbox.Text = dgtable.Rows[RowIndex].Cells[11].Value.ToString();
+                    daterangebox.Text = dgtable.Rows[RowIndex].Cells[11].Value.ToString();
+                    begindatebox.Text = dgtable.Rows[RowIndex].Cells[12].Value.ToString();
+                    enddatebox.Text = dgtable.Rows[RowIndex].Cells[13].Value.ToString();
                 }
             }
             catch { }
@@ -78,7 +80,7 @@ namespace MyInterface.FormClasses
         {
             if (toolscheck.CheckAllDataInsert(form.Controls, salaryidbox))
             {
-                string insert_query = $"insert into Em_salary (Employee_id , Salary_Issue_Date, Total_Leaves, OverTime, Gross_pay_value, No_pay_value, Base_pay_value,Total_Salary, No_pay_Leaves,Workdays_id) values ('{employeenamebox.SelectedValue.ToString()}', '{salaryissuedatebox.Text}' , '{totalleavebox.Text}' , '{OThoursebox.Text}' , '{grosspaybox.Text}', '{nopaybox.Text}','{basepaybox.Text}','{totalsalarybox.Text}', '{nopaylevebox.Text}','{daterangeidbox.Text}')";
+                string insert_query = $"insert into Em_salary (Employee_id , Salary_Issue_Date, Total_Leaves, OverTime, Gross_pay_value, No_pay_value, Base_pay_value,Total_Salary, No_pay_Leaves,Workdays_Range,Begin_date_range,End_date_range) values ('{employeenamebox.SelectedValue.ToString()}', '{salaryissuedatebox.Text}' , '{totalleavebox.Text}' , '{OThoursebox.Text}' , '{grosspaybox.Text}', '{nopaybox.Text}','{basepaybox.Text}','{totalsalarybox.Text}', '{nopaylevebox.Text}','{daterangebox.Text}','{begindatebox.Text}','{enddatebox.Text}')";
                 CommonCode.save(insert_query, LoadTableQuery, dgtable, form.Controls, salaryidbox);
             }
             else
@@ -91,7 +93,7 @@ namespace MyInterface.FormClasses
         {
             if (toolscheck.CheckAllDataInsert(form.Controls, salaryidbox))
             {
-                string update_query = $"update Em_salary set Employee_id = '{employeenamebox.SelectedValue.ToString()}', Salary_Issue_Date = '{salaryissuedatebox.Text}', Total_Leaves = '{totalleavebox.Text}', OverTime = '{OThoursebox.Text}', No_pay_Leaves = '{nopaylevebox.Text}', Gross_pay_value = '{grosspaybox.Text}', No_pay_value = '{nopaybox.Text}', Base_pay_value = '{basepaybox.Text}', Total_Salary = '{totalsalarybox.Text}', Workdays_id = '{daterangeidbox.Text}' where salary_id = '" + salaryidbox.Text + "'";
+                string update_query = $"update Em_salary set Employee_id = '{employeenamebox.SelectedValue.ToString()}', Salary_Issue_Date = '{salaryissuedatebox.Text}', Total_Leaves = '{totalleavebox.Text}', OverTime = '{OThoursebox.Text}', No_pay_Leaves = '{nopaylevebox.Text}', Gross_pay_value = '{grosspaybox.Text}', No_pay_value = '{nopaybox.Text}', Base_pay_value = '{basepaybox.Text}', Total_Salary = '{totalsalarybox.Text}', Workdays_Range = '{daterangebox.Text}',Begin_date_range = '{begindatebox.Text}',End_date_range = '{enddatebox.Text}' where salary_id = '" + salaryidbox.Text + "'";
                 CommonCode.update(update_query, LoadTableQuery, dgtable, form.Controls, salaryidbox);
             }
             else
@@ -118,39 +120,27 @@ namespace MyInterface.FormClasses
         public void showFKdata()
         {
             LoadData.loadFkIntoCompoBox("select * from emp_personal_details", employeenamebox, "Employee_id", "Employee_Full_Name");
-
-            LoadData.loadFkIntoCompoBox($"Select * from workdays", daterangeidbox, "Wo_id", "Wo_id");
-        }
-
-        public void find_date_in_dateRangeroup()
-        {
-            SalaryDetailsCalculation.Find_dates_in_dateRangeroup(daterangeidbox, begindatebox,enddatebox);
         }
 
         public void find_findGroup_data()
         {
             try
             {
-                if (daterangeidbox.SelectedIndex != -1)
+                if (employeenamebox.SelectedIndex != -1)
                 {
-                    if (employeenamebox.SelectedIndex != -1)
-                    {
-                        MessageBox.Show("Please Confirm the Sallary issue date", "Alert Messsage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please Confirm the Salary issue date, Date Range Begin Date and End Date", "Alert Messsage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    SalaryDetailsCalculation.find_work_date_range(daterangebox);
+                    
+                    SalaryDetailsCalculation.find_total_salary(employeenamebox, totalsalarybox);
 
-                        SalaryDetailsCalculation.find_total_salary(employeenamebox, totalsalarybox);
+                    SalaryDetailsCalculation.find_total_leave(employeenamebox,totalleavebox,begindatebox,enddatebox);
 
-                        SalaryDetailsCalculation.find_total_leave(employeenamebox,totalleavebox,begindatebox,enddatebox);
-
-                        SalaryDetailsCalculation.find_total_OThourse(employeenamebox, OThoursebox, begindatebox, enddatebox, salaryissuedatebox, daterangeidbox);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please Select Employee Name");
-                    }
+                    SalaryDetailsCalculation.find_total_OThourse(employeenamebox, OThoursebox, begindatebox, enddatebox, salaryissuedatebox, daterangebox);
                 }
                 else
                 {
-                    MessageBox.Show("Please Select Date Range ID");
+                    MessageBox.Show("Please Select Employee Name");
                 }
             }
             catch (Exception ex)
@@ -164,7 +154,7 @@ namespace MyInterface.FormClasses
         {
             if (totalsalarybox.Text != "")
             {
-                SalaryDetailsCalculation.find_Nopayvalue(totalsalarybox,employeenamebox,daterangeidbox,begindatebox,enddatebox,nopaylevebox,nopaybox);
+                SalaryDetailsCalculation.find_Nopayvalue(totalsalarybox,employeenamebox,begindatebox,enddatebox,nopaylevebox,nopaybox, daterangebox);
 
                 SalaryDetailsCalculation.find_Basepayvalue(totalsalarybox,OThoursebox,basepaybox,employeenamebox);
 

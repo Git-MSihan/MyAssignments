@@ -83,12 +83,6 @@ namespace MyInterface.FormClasses
             }
         }
 
-        public void delete()
-        {
-            string _delete_query = "delete from Configure where Config_id = '" + idbox.Text + "' ";
-            CommonCode.delete(_delete_query, LoadTableQuery, dgtable, form.Controls);
-        }
-
         public void clear()
         {
             CommonCode.Clear(form.Controls);
