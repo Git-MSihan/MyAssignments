@@ -47,6 +47,11 @@ namespace MyInterface
             _empForm.update();
         }
 
+        private void dltBtn_Click(object sender, EventArgs e)
+        {
+            _empForm.delete();
+        }
+
         private void findBtn_Click_1(object sender, EventArgs e)
         {
             _empForm.search_data();

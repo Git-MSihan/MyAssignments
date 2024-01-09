@@ -88,10 +88,6 @@ namespace MyInterface.Calculation
                         {
                             _OThoursebox.Text = OTValue.ToString();
                         }
-                        else
-                        {
-                            _OThoursebox.Text = "0";
-                        }
                     }
                     else
                     {

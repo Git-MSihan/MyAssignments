@@ -40,5 +40,10 @@ namespace MyInterface
         {
             _adminForm.clear();
         }
+
+        private void dltBtn_Click(object sender, EventArgs e)
+        {
+            _adminForm.delete();
+        }
     }
 }

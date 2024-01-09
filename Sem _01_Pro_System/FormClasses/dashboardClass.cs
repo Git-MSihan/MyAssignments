@@ -58,8 +58,8 @@ namespace MyInterface.FormClasses
                             Username = dt.Rows[0]["Username"].ToString(),
                             Password = dt.Rows[0]["Password"].ToString(),
                         };
-                        MessageBox.Show("Login Successful");
                         loginbox.Hide();
+                        MessageBox.Show("Login Successful");
                     }
                     else
                     {

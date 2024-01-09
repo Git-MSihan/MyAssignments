@@ -61,7 +61,7 @@
             // 
             // emloyeeDetailsToolStripMenuItem
             // 
-            this.emloyeeDetailsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.emloyeeDetailsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.emloyeeDetailsToolStripMenuItem.Name = "emloyeeDetailsToolStripMenuItem";
             this.emloyeeDetailsToolStripMenuItem.Size = new System.Drawing.Size(161, 27);
             this.emloyeeDetailsToolStripMenuItem.Text = "Emloyee Details";
@@ -69,7 +69,7 @@
             // 
             // emloyeeTypesDetailsToolStripMenuItem
             // 
-            this.emloyeeTypesDetailsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.emloyeeTypesDetailsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.emloyeeTypesDetailsToolStripMenuItem.Name = "emloyeeTypesDetailsToolStripMenuItem";
             this.emloyeeTypesDetailsToolStripMenuItem.Size = new System.Drawing.Size(216, 27);
             this.emloyeeTypesDetailsToolStripMenuItem.Text = "Emloyee Types Details";

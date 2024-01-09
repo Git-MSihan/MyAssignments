@@ -186,10 +186,10 @@
             // 
             this.usernameTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.usernameTextBox.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTextBox.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTextBox.Location = new System.Drawing.Point(257, 101);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(352, 29);
+            this.usernameTextBox.Size = new System.Drawing.Size(352, 28);
             this.usernameTextBox.TabIndex = 15;
             // 
             // label2

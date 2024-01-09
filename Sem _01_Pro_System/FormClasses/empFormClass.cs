@@ -101,6 +101,12 @@ namespace MyInterface.FormClasses
             }
         }
 
+        public void delete()
+        {
+            string _delet_query = "delete from emp_personal_details where Employee_id = '" + idbox.Text + "' ";
+            CommonCode.delete(_delet_query, LoadTableQuery, dgtable, form.Controls);
+        }
+
         public void clear()
         {
             CommonCode.Clear(form.Controls);

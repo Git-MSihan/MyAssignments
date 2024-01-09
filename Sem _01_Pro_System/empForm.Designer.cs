@@ -63,6 +63,7 @@
             this.EmpNameComboBox = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.AdminIdMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.dltBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArea)).BeginInit();
             this.SuspendLayout();
             // 
@@ -449,6 +450,19 @@
             this.AdminIdMaskedTextBox.TabIndex = 215;
             this.AdminIdMaskedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // dltBtn
+            // 
+            this.dltBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
+            this.dltBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dltBtn.Location = new System.Drawing.Point(531, 386);
+            this.dltBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.dltBtn.Name = "dltBtn";
+            this.dltBtn.Size = new System.Drawing.Size(116, 44);
+            this.dltBtn.TabIndex = 216;
+            this.dltBtn.Text = "Delete";
+            this.dltBtn.UseVisualStyleBackColor = false;
+            this.dltBtn.Click += new System.EventHandler(this.dltBtn_Click);
+            // 
             // empForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -456,6 +470,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(221)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1037, 693);
             this.ControlBox = false;
+            this.Controls.Add(this.dltBtn);
             this.Controls.Add(this.AdminIdMaskedTextBox);
             this.Controls.Add(this.findBtn);
             this.Controls.Add(this.ClrBtn);
@@ -534,5 +549,6 @@
         internal System.Windows.Forms.ComboBox EmpNameComboBox;
         internal System.Windows.Forms.Label label15;
         internal System.Windows.Forms.MaskedTextBox AdminIdMaskedTextBox;
+        internal System.Windows.Forms.Button dltBtn;
     }
 }

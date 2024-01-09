@@ -62,7 +62,7 @@
             // 
             // workDaysToolStripMenuItem
             // 
-            this.workDaysToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.workDaysToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.workDaysToolStripMenuItem.Name = "workDaysToolStripMenuItem";
             this.workDaysToolStripMenuItem.Size = new System.Drawing.Size(118, 27);
             this.workDaysToolStripMenuItem.Text = "Work Days";
@@ -70,7 +70,7 @@
             // 
             // adminDetailsToolStripMenuItem
             // 
-            this.adminDetailsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.adminDetailsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.adminDetailsToolStripMenuItem.Name = "adminDetailsToolStripMenuItem";
             this.adminDetailsToolStripMenuItem.Size = new System.Drawing.Size(136, 27);
             this.adminDetailsToolStripMenuItem.Text = "Login Details";
@@ -78,7 +78,7 @@
             // 
             // configureDetailsToolStripMenuItem
             // 
-            this.configureDetailsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.configureDetailsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.configureDetailsToolStripMenuItem.Name = "configureDetailsToolStripMenuItem";
             this.configureDetailsToolStripMenuItem.Size = new System.Drawing.Size(172, 27);
             this.configureDetailsToolStripMenuItem.Text = "Configure Details";
