@@ -13,7 +13,7 @@ namespace MyInterface.generalcode
         {
              try
              {
-                 foreach (Control control in controls )
+                 foreach (Control control in controls ) //control all tools
                  {
                      if (control is TextBox textBox)
                      {

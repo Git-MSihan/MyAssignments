@@ -44,7 +44,24 @@ namespace MyInterface.FormClasses
 
         private void table_cell_click(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            int RowIndex = e.RowIndex;
+
+            idbox.Text = dgtable.Rows[RowIndex].Cells[0].Value.ToString();
+            fullnamebox.Text = dgtable.Rows[RowIndex].Cells[1].Value.ToString();
+            nicbox.Text = dgtable.Rows[RowIndex].Cells[2].Value.ToString();
+            genderbox.Text = dgtable.Rows[RowIndex].Cells[3].Value.ToString();
+            dobbox.Text = dgtable.Rows[RowIndex].Cells[4].Value.ToString();
+            addressbox.Text = dgtable.Rows[RowIndex].Cells[5].Value.ToString();
+            phonenobox.Text = dgtable.Rows[RowIndex].Cells[6].Value.ToString();
+            emailbox.Text = dgtable.Rows[RowIndex].Cells[7].Value.ToString();
+            joindatebox.Text = dgtable.Rows[RowIndex].Cells[8].Value.ToString();
+            emptypebox.SelectedValue = dgtable.Rows[RowIndex].Cells[9].Value.ToString();
+            salarybox.Text = dgtable.Rows[RowIndex].Cells[10].Value.ToString();
+            otratebox.Text = dgtable.Rows[RowIndex].Cells[11].Value.ToString();
+            allowancebox.Text = dgtable.Rows[RowIndex].Cells[12].Value.ToString();
+            adminidbox.Text = dgtable.Rows[RowIndex].Cells[13].Value.ToString();
+
+           /* try
             {
                 int RowIndex = e.RowIndex;
                 if (RowIndex >= 0)
@@ -65,7 +82,7 @@ namespace MyInterface.FormClasses
                     adminidbox.Text = dgtable.Rows[RowIndex].Cells[13].Value.ToString();
                 }
             }
-            catch { }
+            catch { }*/
         }
 
         string LoadTableQuery = $"SELECT * FROM emp_personal_details";

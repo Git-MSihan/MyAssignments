@@ -90,6 +90,7 @@ namespace MyInterface.FormClasses
 
         public void hoverMsg()
         {
+            // show message
             string message = "Input the Tax rate in decimal format like 0.08";
             showMsgHover.show_msg_mouseHover(taxratebox, message);
         }

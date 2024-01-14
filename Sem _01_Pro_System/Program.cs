@@ -16,7 +16,7 @@ namespace MyInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new homeForm());
+            Application.Run(new empForm());
         }
     }
 }
